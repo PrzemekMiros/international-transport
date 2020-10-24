@@ -1,0 +1,157 @@
+.wycena {
+  padding: 100px 0px 50px;
+  color: #ddd;
+}
+
+#contact {
+  font-family: "Montserrat";
+  position: relative;
+  z-index: 9;
+}
+
+.status_ok {
+  color: #f00;
+  text-align: center;
+}
+
+.status_err {
+  color: #F00
+}
+
+.brheading {
+  font-size: 29px;
+  font-weight: 600;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: "Kanito";
+}
+
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.wybdate {
+  padding: 8px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  padding: 15px;
+  margin: 5px 0px 5px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #fff;
+}
+
+#contact input[type="date"] {
+    padding: 5px;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+  color: black;
+}
+
+::placeholder {
+  color: #111;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #111;
+}
+
+:-moz-placeholder {
+  color: #111;
+}
+
+::-moz-placeholder {
+  color: #111;
+}
+
+:-ms-input-placeholder {
+  color: #111;
+}
+
+.copywright {
+    padding: 5px 0px;
+}
+
+.footer-heart {
+    text-align:center;
+}
+
+.emoji {
+    vertical-align: middle;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+
+#send_form_status {
+  border: 1px solid rgba(192, 0, 0, 0.9);
+  display: none;
+  padding: 0 10px;
+  margin: 10px 0
+}
+
+.kontakt2 {
+  margin-bottom: 50px;
+}
+
+.kontakt2 p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.kontakt2 hr {
+  border: 1px solid rgba(221, 0, 0, 0.5);
+}
