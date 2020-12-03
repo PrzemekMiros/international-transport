@@ -93,36 +93,28 @@ body {
     background: darkred;
     transition: .3s ease-in-out;
   }
-
-h1 { 
-  margin: 0; 
-  padding: 0;
+h1, h2, h3, h4 {
+  margin: 0;
   font-family: "Anton";
-  letter-spacing: 0px;
+  letter-spacing: 1px;
+}
+h1 { 
   color: var(--kolor-nagl);
-  font-size: 8vw;
+  font-size: 25vw;
   font-weight: 900;
   line-height: 1.1;
   text-transform: uppercase;
 }
 h2 { 
   font-weight: 800;
-  margin: 0; 
-  padding: 0;
-  font-family: "Anton";
-  letter-spacing: 0px;
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 11vw;
 }
 h3 {
-  font-family: "Anton";
   color: var(--kolor-glowny2);
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 9vw;
 }
 h4 {
-  font-family: "Anton";
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -148,7 +140,7 @@ h5 {
     font-size: 20.8vw;
   }
   h2 {
-    font-size: 4.3vw;
+    font-size: 3.6vw;
   }
   h3 {
     font-size: 2.5vw;
@@ -169,6 +161,7 @@ p {
   font-size: 18px;
   font-weight: 400;
   color: var(--kolor-txt);
+  line-height: 1.6;
 }
 .textback {
   margin: 0;
@@ -327,7 +320,17 @@ header {
     /* navbar css for mobile end */
   }
   
-  
+  /*----------------------FIXES------------------------*/
+
+@media(min-width:768px) {
+  .padd-50 {
+    padding-top: 60px;
+  }
+  .flex-center {
+    display: flex;
+    align-items: center;
+  }
+}
 
 /*----------------------GŁÓWNA------------------------*/
 
@@ -402,6 +405,7 @@ element {
   margin-left: 0;
   color: var(--kolor-nagl2);
   background-color: var(--kolor-nagl2);
+  margin: 20px 0 20px;
 }
 
 /*----------------------  SEKCJA1   ----------------------*/
@@ -426,6 +430,14 @@ line-height: 1;
 text-shadow: -1px 1px 3px #000;
 }
 
+@media(max-width:768px) {
+  .opisglowny h1::after {
+  top: 55%;
+  right: 0;
+  font-size: 8vw;
+  }
+}
+
 /*----------------------  SEKCJA1   ----------------------*/
 
 .sekcja1 {
@@ -440,13 +452,15 @@ text-shadow: -1px 1px 3px #000;
   bottom: 10%;
   left: 10%;
 }
-.sekcja1 p {
-  margin-bottom: 50px;
+.sekcja1 ol {
+  margin-left: -20px;
+padding-bottom: 24px;
+line-height: 1.6;
 }
 
 .sekcja1 .obraz {
+  margin-top: 30px;
   position: relative;
-  padding-right: 15%;
   z-index: 9;
 }
 
@@ -459,6 +473,16 @@ text-shadow: -1px 1px 3px #000;
   z-index: 1;
 }
 
+@media(min-width:768px) {
+  .sekcja1 .obraz {
+    padding-right: 15%;
+    margin-top: 0;
+  }
+  .width5 {
+    width: 70%;
+  }
+}
+
 /*----------------------  SEKCJA2   ----------------------*/
 
 .sekcja2 {
@@ -466,6 +490,7 @@ text-shadow: -1px 1px 3px #000;
   min-height: 100vh;
   padding: 70px 0px;
   background: url("../img/main/main4.jpg");
+  background-position: right;
   background-size: cover;
   z-index: 9;
 }
@@ -483,13 +508,23 @@ text-shadow: -1px 1px 3px #000;
 
 .sekcja2 h3 {
   margin: 0;
-  font-size: 6vw;
-  line-height: 1;
+  font-size: 3.6vw;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .sekcja2 p {
   margin-bottom: 35px;
+}
+
+@media(max-width:768px) {
+  .sekcja2 h3 {
+    font-size: 11vw;
+    margin-bottom: 30px;
+  }
+  .afterimg {
+    display: none;
+  }
 }
 /*----------------------  SEKCJA3   ----------------------*/
 
@@ -502,20 +537,28 @@ text-shadow: -1px 1px 3px #000;
 
 .sekcja3 h2 {
   color: var(--kolor-nagl2);
-  font-size: 8vw;
-  margin-top: 60px;
+  font-size: 4vw;
 }
 
 .sekcja3 h3 {
   text-transform: uppercase;
 }
 
-
-
 .sekcja3 p {
   margin-bottom: 50px;
 }
 
+
+
+@media(max-width:768px) {
+  .sekcja3 h2 {
+    font-size: 12vw;
+  }
+  .sekcja3 h3 {
+    font-size: 5vw;
+  }
+  
+}
 /*----------------------  SEKCJA4   ----------------------*/
 
 .sekcja4 {
@@ -557,11 +600,11 @@ justify-content: space-between;
 }
 .column1 {
   margin: 15px 0px;
-  padding: 70px 25px 25px;
+  padding: 70px 25px 65px;
   background: rgba(41, 41, 41, 1);
   text-align: center;
   cursor: pointer;
-  transition: .3s ease-in-out
+  transition: .3s ease-in-out;
 }
 .column1:hover {
   background: var(--kolor-nagl2);
@@ -584,10 +627,19 @@ justify-content: space-between;
 }
 .ikonka4 {
   width: 167px;
+  height: auto;
 margin: -26px 0px;
 }
+.ikonka5 {
+  width: 85px;
+  height: auto;
+  margin: 0px 0px -14px;
+}
 .fixmarg {
-  margin: 10px 0px 0px;
+  margin: 15px 0px 0px;
+}
+.fix2 {
+  padding-bottom: 35px;
 }
 
 /*----------------------  KONTAKT  ----------------------*/
@@ -596,7 +648,12 @@ margin: -26px 0px;
   padding: 120px 0px;
   background: #000;
 }
-
+.kontakt ul {
+  margin-top: 40px;
+  list-style: none;
+  margin-left: -40px;
+  line-height: 1.8;
+}
 
 
 /*----------------------  FORMULARZ  ----------------------*/
@@ -789,5 +846,28 @@ transition: .3s ease-in-out;
 }
 .moveup {
   margin-top: -100px;
+width: 100%;
+height: 74vh !important;
+object-fit: cover;
+}
+
+@media(max-width:768px) {
+  .margmob {
+    margin-top: 50px;
+  }
+  .podstrony h1 {
+    font-size: 14vw;
+    margin-bottom: 70px;
+ }
+}
+
+.sekcjaoferta ul {
+  margin-left: -20px;
+  line-height: 1.7;
+}
+
+
+.polityka h3 {
+  margin: 50px 0 30px;
 }
 
